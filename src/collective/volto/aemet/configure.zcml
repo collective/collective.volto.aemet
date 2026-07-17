@@ -1,0 +1,43 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="collective.volto.aemet"
+    >
+
+  <i18n:registerTranslations directory="locales" />
+
+  <!-- include the Products.CMFCore package permissions. -->
+  <include
+      package="Products.CMFCore"
+      file="permissions.zcml"
+      />
+
+  <!-- Resource directory for Publish static media files -->
+  <browser:resourceDirectory
+      directory="static"
+      name="collective.volto.aemet"
+      />
+
+  <!-- dependencies packages. -->
+  <include file="dependencies.zcml" />
+  <!-- genericsetup profiles. -->
+  <include file="profiles.zcml" />
+  <!-- has to be loaded before permissions are used, so keep above views aso. -->
+  <include file="permissions.zcml" />
+
+  <!-- control panels included -->
+  <include package=".controlpanels" />
+  <!-- indexers included -->
+  <include package=".indexers" />
+  <!-- restapi services included -->
+  <include package=".restapi" />
+  <!-- serializers included -->
+  <include package=".serializers" />
+  <!-- vocabularies included -->
+  <include package=".vocabularies" />
+
+  <!-- -*- extra stuff goes here -*- -->
+
+</configure>

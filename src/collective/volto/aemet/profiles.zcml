@@ -1,0 +1,35 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="collective.volto.aemet"
+    >
+
+  <genericsetup:registerProfile
+      name="default"
+      title="AEMET integration with Plone: Install"
+      description="Package to configure a new AEMET integration with Plone site"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      directory="profiles/default"
+      />
+
+  <genericsetup:registerProfile
+      name="uninstall"
+      title="AEMET Plone: Uninstall"
+      description="Uninstall AEMET integration with Plone setup."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      directory="profiles/uninstall"
+      />
+
+  <!-- Hide Uninstall Profile-->
+  <utility
+      factory=".setuphandlers.HiddenProfiles"
+      name="collective.volto.aemet"
+      />
+
+
+  <include package=".upgrades" />
+
+  <!-- -*- extra stuff goes here -*- -->
+
+</configure>

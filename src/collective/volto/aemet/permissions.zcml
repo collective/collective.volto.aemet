@@ -1,0 +1,19 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    i18n_domain="collective.volto.aemet"
+    >
+
+  <configure zcml:condition="installed AccessControl.security">
+
+    <!-- Add ManageAemetSettings permission -->
+    <permission
+        id="volto.aemet.ManageAemetSettings"
+        title="volto.aemet: Manage AEMET Settings"
+        />
+
+  </configure>
+
+  <!-- -*- extra stuff goes here -*- -->
+
+</configure>

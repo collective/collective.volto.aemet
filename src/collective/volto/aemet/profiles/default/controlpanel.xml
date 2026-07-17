@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<object xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+        name="portal_controlpanel"
+        purge="False"
+        i18n:domain="collective.volto.aemet"
+>
+
+  <!-- 'AEMET' Settings -->
+  <configlet action_id="AemetSettings"
+             appId="AemetSettings"
+             category="Products"
+             condition_expr=""
+             icon_expr="string:${portal_url}/++resource++collective.volto.aemet/images/aemet-logo.svg"
+             title="AEMET Settings"
+             url_expr="string:${portal_url}/@@aemet-settings"
+             visible="True"
+             i18n:attributes="title"
+  >
+    <permission>volto.aemet: Manage AEMET Settings</permission>
+  </configlet>
+
+  <!-- -*- extra stuff goes here -*- -->
+
+</object>

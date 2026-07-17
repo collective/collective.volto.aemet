@@ -1,0 +1,14 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    >
+
+  <plone:service
+      method="GET"
+      factory=".weather_forecast.WeatherForecastGet"
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      permission="zope2.View"
+      name="@aemet-weather-forecast"
+      />
+
+</configure>

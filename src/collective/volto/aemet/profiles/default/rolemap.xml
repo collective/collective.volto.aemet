@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rolemap>
+  <roles>
+    <!-- 'AEMET' role -->
+    <role name="AEMET" />
+  </roles>
+
+  <permissions>
+
+    <!-- This is needed to access 'AEMET settings' controlpanel -->
+    <permission acquire="True"
+                name="Plone Site Setup: Overview"
+    >
+      <role name="Manager" />
+      <role name="Site Administrator" />
+      <role name="AEMET" />
+    </permission>
+
+    <!-- Manage 'AEMET' Settings role mapping -->
+    <permission acquire="True"
+                name="volto.aemet: Manage AEMET Settings"
+    >
+      <role name="AEMET" />
+    </permission>
+    <!-- -*- extra stuff goes here -*- -->
+
+  </permissions>
+</rolemap>

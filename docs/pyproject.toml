@@ -1,0 +1,79 @@
+[project]
+name = "collective_volto_aemet_documentation"
+description = "An integration for the AEMET service with Plone"
+readme = "README.md"
+license = "CC-BY-4.0"
+license-files = ["LICENSE.md"]
+authors = [
+    { name = "Leonardo J. Caballero G.", email = "leonardocaballero@gmail.com" },
+]
+maintainers = [
+    { name = "Leonardo J. Caballero G.", email = "leonardocaballero@gmail.com" },
+]
+keywords = [
+    "CMS",
+    "Plone",
+    "Python",
+    "AEMET",
+    "integration",
+    "documentation",
+]
+version="1.0.0"
+requires-python = ">=3.10,<3.14"
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Environment :: Web Environment",
+    "Framework :: Plone",
+    "Framework :: Plone :: 6.0",
+    "Framework :: Plone :: 6.1",
+    "Framework :: Plone :: Addon",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Communications :: Email",
+    "Topic :: Communications :: Email :: Filters",
+    "Topic :: Internet :: WWW/HTTP",
+]
+
+[dependency-groups]
+dev = [
+    "graphviz",
+    "linkify-it-py",
+    "myst-parser",
+    "plone-sphinx-theme>=1.4.1",  # Use the latest stable version or a minimum
+    "setuptools",  # required by sphinxcontrib.httpexample, remove when it migrates to importlib. See https://github.com/macagua/sphinxcontrib-httpexample/issues/106
+    "sphinx-autobuild",
+    "sphinx-copybutton",
+    "sphinx-design",
+    "sphinx-examples",
+    "sphinx-notfound-page",
+    "sphinx-reredirects",
+    "sphinx-sitemap",
+    "sphinx-tippy",
+    "sphinxcontrib-httpdomain",
+    "sphinxcontrib-httpexample",
+    "sphinxcontrib-mermaid",
+    "sphinxcontrib-video",
+    "sphinxcontrib-youtube",
+    "sphinxext-opengraph",
+    "vale",
+]
+
+[project.urls]
+Repository = "https://github.com/macagua/collective.volto.aemet"
+Source = "https://github.com/macagua/collective.volto.aemet"
+Tracker = "https://github.com/macagua/collective.volto.aemet/issues"
+Documentation = "https://collectivevoltoaemet.readthedocs.io/"
+Changelog = "https://github.com/macagua/collective.volto.aemet/blob/main/CHANGELOG.md"
+"Contributors" = "https://github.com/macagua/collective.volto.aemet/blob/main/CONTRIBUTORS.md"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+exclude = ["styles"]

@@ -1,0 +1,31 @@
+# Include top-level files
+include README.md
+include LICENSE.md
+include LICENSE.GPL
+
+# Exclude top-level files
+exclude tox.ini Makefile bobtemplate.cfg mx.ini
+
+# Add all files under directories matching
+graft src/collective/volto/aemet/profiles
+graft docs
+
+recursive-include src/collective/volto/aemet *.zcml
+recursive-include src/collective/volto/aemet *.xml
+recursive-include src/collective/volto/aemet *.txt
+recursive-include src/collective/volto/aemet *.pot
+recursive-include src/collective/volto/aemet *.po
+recursive-include src/collective/volto/aemet *.mo
+
+# Include test files in sdist
+recursive-include tests *.py
+
+# Remove all files under directories matching
+prune scripts
+prune news
+prune .agents
+prune .claude
+prune .mxdev_cache
+
+# Exclude temporal files and compiled Python files
+global-exclude *~ *.py[cod]
