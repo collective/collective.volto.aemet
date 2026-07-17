@@ -16,8 +16,8 @@
 
   <!-- Resource directory for Publish static media files -->
   <browser:resourceDirectory
-      directory="static"
       name="collective.volto.aemet"
+      directory="static"
       />
 
   <!-- dependencies packages. -->

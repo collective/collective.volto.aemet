@@ -1,7 +1,5 @@
 from collective.volto.aemet.interfaces import IAemetSettings
-from collective.volto.aemet.interfaces import (
-    IAemetSettingsControlpanel,
-)
+from collective.volto.aemet.interfaces import IAemetSettingsControlpanel
 from plone.restapi.controlpanels import RegistryConfigletPanel
 from zope.component import adapter
 from zope.interface import implementer

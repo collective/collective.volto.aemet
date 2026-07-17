@@ -1,6 +1,8 @@
 """Tests for the WeatherForecastGet REST API service."""
 
-from collective.volto.aemet.restapi.services.aemet.weather_forecast import WeatherForecastGet
+from collective.volto.aemet.restapi.services.aemet.weather_forecast import (
+    WeatherForecastGet,
+)
 from unittest.mock import MagicMock
 from unittest.mock import patch
 from xml.etree import ElementTree
@@ -149,7 +151,9 @@ class TestWeatherForecastGetReply:
     # Successful (200) paths
     # ------------------------------------------------------------------
 
-    @patch("collective.volto.aemet.restapi.services.aemet.weather_forecast.requests.get")
+    @patch(
+        "collective.volto.aemet.restapi.services.aemet.weather_forecast.requests.get"
+    )
     @patch("collective.volto.aemet.restapi.services.aemet.weather_forecast.datetime")
     def test_primary_period_found(self, mock_dt, mock_get):
         """Sky state is found at the exact current time period."""
@@ -170,7 +174,9 @@ class TestWeatherForecastGetReply:
         assert item["tempMax"] == "22"
         assert item["currentHour"] == 14
 
-    @patch("collective.volto.aemet.restapi.services.aemet.weather_forecast.requests.get")
+    @patch(
+        "collective.volto.aemet.restapi.services.aemet.weather_forecast.requests.get"
+    )
     @patch("collective.volto.aemet.restapi.services.aemet.weather_forecast.datetime")
     def test_fallback_to_00_12_when_hour_lt_12(self, mock_dt, mock_get):
         """Falls back to '00-12' period when primary '00-06' period is absent."""
@@ -184,7 +190,9 @@ class TestWeatherForecastGetReply:
         assert item["skyState"] == "Nublado"
         assert item["skyStateValue"] == "15"
 
-    @patch("collective.volto.aemet.restapi.services.aemet.weather_forecast.requests.get")
+    @patch(
+        "collective.volto.aemet.restapi.services.aemet.weather_forecast.requests.get"
+    )
     @patch("collective.volto.aemet.restapi.services.aemet.weather_forecast.datetime")
     def test_fallback_to_12_24_when_hour_gte_12(self, mock_dt, mock_get):
         """Falls back to '12-24' period when primary '18-24' period is absent."""
@@ -198,7 +206,9 @@ class TestWeatherForecastGetReply:
         assert item["skyState"] == "Tormenta"
         assert item["skyStateValue"] == "54"
 
-    @patch("collective.volto.aemet.restapi.services.aemet.weather_forecast.requests.get")
+    @patch(
+        "collective.volto.aemet.restapi.services.aemet.weather_forecast.requests.get"
+    )
     @patch("collective.volto.aemet.restapi.services.aemet.weather_forecast.datetime")
     def test_final_fallback_to_00_24(self, mock_dt, mock_get):
         """Falls back to '00-24' when both primary and 12-hour periods are absent."""
@@ -212,7 +222,9 @@ class TestWeatherForecastGetReply:
         assert item["skyState"] == "Cubierto"
         assert item["skyStateValue"] == "8"
 
-    @patch("collective.volto.aemet.restapi.services.aemet.weather_forecast.requests.get")
+    @patch(
+        "collective.volto.aemet.restapi.services.aemet.weather_forecast.requests.get"
+    )
     @patch("collective.volto.aemet.restapi.services.aemet.weather_forecast.datetime")
     def test_no_sky_state_uses_default_values(self, mock_dt, mock_get):
         """When no sky state can be found, defaults are used."""
@@ -226,7 +238,9 @@ class TestWeatherForecastGetReply:
         assert item["skyStateValue"] == "11"
         assert "Not available" in str(item["skyState"])
 
-    @patch("collective.volto.aemet.restapi.services.aemet.weather_forecast.requests.get")
+    @patch(
+        "collective.volto.aemet.restapi.services.aemet.weather_forecast.requests.get"
+    )
     @patch("collective.volto.aemet.restapi.services.aemet.weather_forecast.datetime")
     def test_no_temperatura_element_gives_none_temps(self, mock_dt, mock_get):
         """When the <temperatura> element is absent, min/max are None."""
@@ -244,7 +258,9 @@ class TestWeatherForecastGetReply:
         assert item["tempMin"] is None
         assert item["tempMax"] is None
 
-    @patch("collective.volto.aemet.restapi.services.aemet.weather_forecast.requests.get")
+    @patch(
+        "collective.volto.aemet.restapi.services.aemet.weather_forecast.requests.get"
+    )
     @patch("collective.volto.aemet.restapi.services.aemet.weather_forecast.datetime")
     def test_temperatura_without_children_gives_none_temps(self, mock_dt, mock_get):
         """When <temperatura> has no minima/maxima children, min/max are None."""
@@ -262,7 +278,9 @@ class TestWeatherForecastGetReply:
         assert item["tempMin"] is None
         assert item["tempMax"] is None
 
-    @patch("collective.volto.aemet.restapi.services.aemet.weather_forecast.requests.get")
+    @patch(
+        "collective.volto.aemet.restapi.services.aemet.weather_forecast.requests.get"
+    )
     @patch("collective.volto.aemet.restapi.services.aemet.weather_forecast.datetime")
     def test_non_today_days_are_excluded(self, mock_dt, mock_get):
         """Days whose date does not match today must not appear in the forecast."""
@@ -278,7 +296,9 @@ class TestWeatherForecastGetReply:
     # Error paths
     # ------------------------------------------------------------------
 
-    @patch("collective.volto.aemet.restapi.services.aemet.weather_forecast.requests.get")
+    @patch(
+        "collective.volto.aemet.restapi.services.aemet.weather_forecast.requests.get"
+    )
     def test_non_200_response_returns_error(self, mock_get):
         mock_get.return_value = self._mock_get(503)
 
@@ -287,7 +307,9 @@ class TestWeatherForecastGetReply:
         assert result == {"error": "Failed to fetch weather forecast data"}
         self.request_mock.response.setStatus.assert_called_once_with(503)
 
-    @patch("collective.volto.aemet.restapi.services.aemet.weather_forecast.requests.get")
+    @patch(
+        "collective.volto.aemet.restapi.services.aemet.weather_forecast.requests.get"
+    )
     def test_exception_returns_500_error(self, mock_get):
         mock_get.side_effect = ConnectionError("network failure")
 

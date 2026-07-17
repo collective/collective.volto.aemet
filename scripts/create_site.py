@@ -62,7 +62,5 @@ if site_id not in app.objectIds():
     transaction.commit()
 
     portal_setup: SetupTool = site.portal_setup
-    portal_setup.runAllImportStepsFromProfile(
-        "profile-collective.volto.aemet:default"
-    )
+    portal_setup.runAllImportStepsFromProfile("profile-collective.volto.aemet:default")
     transaction.commit()

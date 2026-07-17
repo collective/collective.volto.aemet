@@ -1,10 +1,10 @@
 """Weather forecast service for AEMET data."""
 
+from collective.volto.aemet import _
 from datetime import date
 from datetime import datetime
 from plone import api as ploneapi
 from plone.restapi.services import Service
-from collective.volto.aemet import _
 from xml.etree import ElementTree
 
 import requests
