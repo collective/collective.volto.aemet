@@ -64,12 +64,12 @@ dev = [
 ]
 
 [project.urls]
-Repository = "https://github.com/macagua/collective.volto.aemet"
-Source = "https://github.com/macagua/collective.volto.aemet"
-Tracker = "https://github.com/macagua/collective.volto.aemet/issues"
+Repository = "https://github.com/collective/collective.volto.aemet"
+Source = "https://github.com/collective/collective.volto.aemet"
+Tracker = "https://github.com/collective/collective.volto.aemet/issues"
 Documentation = "https://collectivevoltoaemet.readthedocs.io/"
-Changelog = "https://github.com/macagua/collective.volto.aemet/blob/main/CHANGELOG.md"
-"Contributors" = "https://github.com/macagua/collective.volto.aemet/blob/main/CONTRIBUTORS.md"
+Changelog = "https://github.com/collective/collective.volto.aemet/blob/main/CHANGELOG.md"
+"Contributors" = "https://github.com/collective/collective.volto.aemet/blob/main/CONTRIBUTORS.md"
 
 [build-system]
 requires = ["setuptools"]

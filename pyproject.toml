@@ -59,13 +59,13 @@ release = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/macagua/collective.volto.aemet"
+Homepage = "https://github.com/collective/collective.volto.aemet"
 PyPI = "https://pypi.org/project/collective.volto.aemet"
-Source = "https://github.com/macagua/collective.volto.aemet"
-Tracker = "https://github.com/macagua/collective.volto.aemet/issues"
+Source = "https://github.com/collective/collective.volto.aemet"
+Tracker = "https://github.com/collective/collective.volto.aemet/issues"
 Documentation = "https://collectivevoltoaemet.readthedocs.io/"
-Changelog = "https://github.com/macagua/collective.volto.aemet/blob/main/CHANGELOG.md"
-"Contributors" = "https://github.com/macagua/collective.volto.aemet/blob/main/CONTRIBUTORS.md"
+Changelog = "https://github.com/collective/collective.volto.aemet/blob/main/CHANGELOG.md"
+"Contributors" = "https://github.com/collective/collective.volto.aemet/blob/main/CONTRIBUTORS.md"
 
 [project.entry-points."plone.autoinclude.plugin"]
 target = "plone"
@@ -109,7 +109,7 @@ filename = "CHANGELOG.md"
 start_string = "<!-- towncrier release notes start -->\n"
 title_format = "## {version} ({project_date})"
 template = "news/.changelog_template.jinja"
-issue_format = "[#{issue}](https://github.com/macagua/collective.volto.aemet/issues/{issue})"
+issue_format = "[#{issue}](https://github.com/collective/collective.volto.aemet/issues/{issue})"
 underlines = ["", "", ""]
 
 [[tool.towncrier.type]]

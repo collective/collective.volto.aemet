@@ -21,6 +21,7 @@ An integration for the `AEMET` service with Plone and Volto integration.
 :hidden: true
 
 how-to-guides/index
+how-to-guides/security
 ```
 
 ```{toctree}
@@ -32,19 +33,19 @@ concepts/index
 ```
 
 ```{toctree}
-:caption: Reference
-:maxdepth: 2
-:hidden: true
-
-reference/index
-```
-
-```{toctree}
 :caption: Tutorials
 :maxdepth: 2
 :hidden: true
 
 tutorials/index
+```
+
+```{toctree}
+:caption: Reference
+:maxdepth: 2
+:hidden: true
+
+reference/index
 ```
 
 ```{toctree}
