@@ -28,7 +28,7 @@ An integration for the [AEMET](https://www.aemet.es/) service with Plone.
 
 ## Volto integration
 
-To use this product in Volto, your Volto project needs to include a new add-on: https://github.com/macagua/volto-aemet
+To use this product in Volto, your Volto project needs to include a new add-on: https://github.com/collective/volto-aemet
 
 ## Translations
 
@@ -159,7 +159,7 @@ This route returns a JSON object containing the ``AEMET`` weather forecast data:
 }
 ```
 
-This can be used in for a _Volto integration_ for example the `WeatherForecast` component available into the [volto-aemet](https://github.com/macagua/volto-aemet) add-on.
+This can be used in for a _Volto integration_ for example the `WeatherForecast` component available into the [volto-aemet](https://github.com/collective/volto-aemet) add-on.
 
 ---
 
@@ -224,6 +224,10 @@ See also the documentation of [Mockup and Patternslib](https://6.docs.plone.org/
 ## Credits
 
 Developed with the support of:
+
+- [Agencia Estatal de Meteorología - AEMET. Gobierno de España](https://www.aemet.es/).
+
+  <img width="500" alt="AEMET Logo" src="https://raw.githubusercontent.com/collective/collective.volto.aemet/refs/heads/main/docs/source/images/aemet-logo-blue.svg">
 
 - [Instituto Municipal de Deportes - IMD, Seville City Council, Spain](https://imd.sevilla.org/).
 

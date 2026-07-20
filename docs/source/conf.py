@@ -95,7 +95,7 @@ linkcheck_ignore = [
     # Ignore file downloads
     r"^/_static/",
     # Ignore pages that require authentication
-    r"https://github.com/collective/collective.volto.aemet/issues/new",  # requires auth  ## noqa: E501
+    r"https://github.com/collective/collective.volto.aemet/issues/new",  # requires auth  # noqa: E501
     # Ignore github.com pages with anchors
     r"https://github.com/.*#.*",
     # Ignore other specific anchors
@@ -251,7 +251,7 @@ sitemap_filename = "sitemap-custom.xml"
 myst_enable_extensions = [
     "attrs_block",  # Support parsing of block attributes.
     "attrs_inline",  # Support parsing of inline attributes.
-    "colon_fence",  # You can also use ::: delimiters to denote code fences, instead of ```.  ## noqa: E501
+    "colon_fence",  # You can also use ::: delimiters to denote code fences, instead of ```.  # noqa: E501
     "deflist",  # Support definition lists. https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#definition-lists
     "html_image",  # For inline images. See https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#html-images
     "linkify",  # Identify "bare" web URLs and add hyperlinks.

@@ -15,6 +15,7 @@ keywords = [
     "Plone",
     "Python",
     "AEMET",
+    "Weather",
     "integration",
     "documentation",
 ]
@@ -34,8 +35,6 @@ classifiers = [
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
-    "Topic :: Communications :: Email",
-    "Topic :: Communications :: Email :: Filters",
     "Topic :: Internet :: WWW/HTTP",
 ]
 
@@ -45,7 +44,7 @@ dev = [
     "linkify-it-py",
     "myst-parser",
     "plone-sphinx-theme>=1.4.1",  # Use the latest stable version or a minimum
-    "setuptools",  # required by sphinxcontrib.httpexample, remove when it migrates to importlib. See https://github.com/macagua/sphinxcontrib-httpexample/issues/106
+    "setuptools",  # required by sphinxcontrib.httpexample, remove when it migrates to importlib. See https://github.com/collective/sphinxcontrib-httpexample/issues/106
     "sphinx-autobuild",
     "sphinx-copybutton",
     "sphinx-design",

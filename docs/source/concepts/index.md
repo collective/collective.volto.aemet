@@ -9,7 +9,7 @@ myst:
 
 # Functional concepts
 
-Functional concepts of integration with AEMET in Plone and Volto
+Functional concepts of integration with AEMET in Plone and Volto.
 
 ## Introduction
 

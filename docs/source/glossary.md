@@ -24,6 +24,10 @@ collective.volto.aemet
     It provides a control panel to configure the target municipality, a REST API endpoint to expose weather forecast data, and a browser layer to scope its components.
     It is designed to work together with the [volto-aemet](https://github.com/collective/volto-aemet) Volto add-on.
 
+volto-aemet
+    `volto-aemet` is the Volto add-on that integrates AEMET weather data into a Plone site via the `collective.volto.aemet` add-on.
+    It provides a control panel to configure the target municipality, Two Volto content blocks..
+
 Location ID
 location_id
     The Location ID is a numeric code that uniquely identifies a Spanish municipality in the AEMET XML data service.
@@ -41,7 +45,7 @@ AEMET Settings control panel
 @aemet-weather-forecast
     ``@aemet-weather-forecast`` is the REST API endpoint provided by this add-on.
     It is publicly accessible (``zope2.View`` permission) and returns a JSON object with the current day's weather forecast for the configured municipality, fetched from the AEMET XML service.
-    Example: ``GET /Plone/++api++/@aemet-weather-forecast``
+    Example: ``GET /Plone/++api++/@aemet-weather-forecast``.
 
 Registry
     The Plone Registry is a key-value store for site configuration, managed by the ``plone.registry`` package.

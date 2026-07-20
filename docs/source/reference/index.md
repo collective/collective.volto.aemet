@@ -7,7 +7,7 @@ myst:
     "keywords": "Plone, _AEMET integration with Plone,_ reference"
 ---
 
-# Reference
+# General resources
 
 This part of the documentation contains reference material, including APIs, configuration values, and environment variables.
 

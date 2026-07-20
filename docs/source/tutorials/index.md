@@ -117,4 +117,4 @@ This route returns a JSON object containing the ``AEMET`` weather forecast data:
 }
 ```
 
-This can be used in for a _Volto integration_ for example the `WeatherForecast` component available into the [volto-aemet](https://github.com/macagua/volto-aemet) add-on.
+This can be used in for a _Volto integration_ for example the `WeatherForecast` component available into the [volto-aemet](https://github.com/collective/volto-aemet) add-on.
