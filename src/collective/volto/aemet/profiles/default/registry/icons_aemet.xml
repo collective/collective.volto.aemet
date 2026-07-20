@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<registry>
+
+  <record name="plone.icon.aemet">
+    <field type="plone.registry.field.TextLine">
+      <title>AEMET Icon Default</title>
+    </field>
+    <value key="resource">++plone++aemet-icons/aemet-logo.svg</value>
+  </record>
+
+</registry>

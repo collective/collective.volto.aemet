@@ -13,11 +13,14 @@
       package="Products.CMFCore"
       file="permissions.zcml"
       />
+  <!-- include plone.resource package -->
+  <include package="plone.resource" file="meta.zcml"/>
 
   <!-- Resource directory for Publish static media files -->
-  <browser:resourceDirectory
-      name="collective.volto.aemet"
-      directory="static"
+  <plone:static
+      directory="static/icons"
+      name="aemet-icons"
+      type="plone"
       />
 
   <!-- dependencies packages. -->

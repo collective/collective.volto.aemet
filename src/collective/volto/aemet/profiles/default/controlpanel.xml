@@ -10,7 +10,7 @@
              appId="AemetSettings"
              category="Products"
              condition_expr=""
-             icon_expr="string:${portal_url}/++resource++collective.volto.aemet/images/aemet-logo.svg"
+             icon_expr="string:${portal_url}/++plone++aemet-icons/aemet-logo.svg"
              title="AEMET Settings"
              url_expr="string:${portal_url}/@@aemet-settings"
              visible="True"
