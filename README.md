@@ -2,15 +2,17 @@
 
 [![Latest Version](https://img.shields.io/pypi/v/collective.volto.aemet.svg)](https://pypi.org/project/collective.volto.aemet/) [![Supported - Python Versions](https://img.shields.io/pypi/pyversions/collective.volto.aemet.svg?style=plastic)](https://pypi.org/project/collective.volto.aemet/) [![Number of PyPI downloads](https://img.shields.io/pypi/dm/collective.volto.aemet.svg)](https://pypi.org/project/collective.volto.aemet/) [![License](https://img.shields.io/pypi/l/collective.volto.aemet.svg)](https://pypi.org/project/collective.volto.aemet/)
 
-[![AEMET](https://raw.githubusercontent.com/collective/collective.volto.aemet/refs/heads/main/docs/source/_static/logo.svg)](https://www.aemet.es/)
+[![AEMET](https://raw.githubusercontent.com/collective/collective.volto.aemet/refs/heads/main/docs/source/_static/logo.svg)](https://www.aemet.es/es/portada)
 
-An integration for the [AEMET](https://www.aemet.es/) service with Plone.
+An integration for the [AEMET](https://www.aemet.es/es/portada) service with Plone.
 
 ## Features
 
-- Control panel in Plone registry to manage ``AEMET settings``.
-- RestApi endpoint that exposes these settings for Volto.
-- RestApi endpoint that exposes the current weather forecast for location defined on the **AEMET Settings** control panel.
+- Control panel in Plone registry to manage ``AEMET Settings``.
+
+- RestApi endpoint that exposes the `AEMET Settings` for `Volto` _integration_.
+
+- RestApi endpoint that exposes the current _weather forecast_ for the _Location ID_ defined on the ``AEMET Settings`` control panel.
 
 ## Screenshot
 
@@ -24,15 +26,14 @@ An integration for the [AEMET](https://www.aemet.es/) service with Plone.
 
 <img width="720" alt="AEMET Settings" src="https://raw.githubusercontent.com/collective/collective.volto.aemet/refs/heads/main/docs/source/images/aemet-settings.png">
 
----
-
 ## Volto integration
 
-To use this product in Volto, your Volto project needs to include a new add-on: https://github.com/collective/volto-aemet
+To use this product in `Volto`, you needs to include the following `add-on`
+in your project: [volto-aemet](https://github.com/collective/volto-aemet).
 
 ## Translations
 
-This product has been translated into
+This product support the following languages:
 
 - Basque
 
@@ -46,11 +47,11 @@ This product has been translated into
 
 ## Compatibility
 
-- Tested with Python 3.12 and Plone 6.1.5.
+- Tested with `Python` 3.12 and {term}`Plone` 6.1.5.
 
 ## Install it
 
-Install `collective.volto.aemet` with `pip`:
+To install in your project, the `collective.volto.aemet` `add-on` with `pip` command:
 
 ```shell
 pip install collective.volto.aemet
@@ -62,15 +63,20 @@ And to create the `Plone` site:
 make create-site
 ```
 
----
+## Custom REST services
 
-## @aemet-settings route
+`Plone` can expose specific endpoints for `Volto`. These services encapsulate
+the logic for communicating with `AEMET` and provide a standardised format
+for the front end.
+
+### AEMET settings route
 
 Anonymous users can't access registry resources by default with ``plone.restapi`` (there is a special permission).
 
-To avoid enabling registry access to everyone, this package exposes a dedicated RestApi route with ``AEMET`` settings: *@aemet-settings*:
+To avoid enabling registry access to everyone, this package exposes a dedicated RestApi `route` with
+``AEMET Settings`` (`@aemet-settings`):
 
-Get the information from the ``AEMET`` settings via `curl` command:
+Get the information from the ``AEMETAEMET Settings`` via `curl` command:
 
 ```shell
 curl -X GET http://localhost:8080/Plone/@controlpanels/aemet-settings \
@@ -78,7 +84,7 @@ curl -X GET http://localhost:8080/Plone/@controlpanels/aemet-settings \
   --user admin:admin
 ```
 
-This route returns a JSON object containing the ``AEMET`` weather forecast settings and data via `curl` command:
+This `route` returns a `JSON` object containing the ``AEMET Settings`` and weather forecast data via `curl` command:
 
 ```json
 {
@@ -115,7 +121,8 @@ This route returns a JSON object containing the ``AEMET`` weather forecast setti
 }
 ```
 
-Update the `location_id` field value of the ``AEMET`` settings:
+Below is a `PATCH` operation to set up the `location_id` field value of the
+``AEMET Settings``:
 
 ```shell
 curl -i -X PATCH http://localhost:8080/Plone/@controlpanels/aemet-settings \
@@ -125,7 +132,7 @@ curl -i -X PATCH http://localhost:8080/Plone/@controlpanels/aemet-settings \
   --user admin:admin
 ```
 
-This route returns a HTTP response:
+This `route` returns a HTTP response:
 
 ```shell
 HTTP/1.1 204 No Content
@@ -136,17 +143,21 @@ Via: waitress
 X-Powered-By: Zope (www.zope.dev), Python (www.python.org)
 ```
 
+That means you updates the values in the ``AEMET Settings`` control panel fields correctly.
+
+**NOTE:** You can validate the update operation, going to ``Site setup > Add-on Settings > AEMET Settings``.
+
 ---
 
-## @aemet-weather-forecast route
+### AEMET weather forecast route
 
-This route is used to fetch the current weather forecast for location defined on the **AEMET Settings control panel**:
+This `route` is uses to fetch the current weather forecast for location defined on the **AEMET Settings control panel**:
 
 ```shell
 curl -X GET http://localhost:8080/Plone/++api++/@aemet-weather-forecast
 ```
 
-This route returns a JSON object containing the ``AEMET`` weather forecast data:
+This `route` returns a `JSON` object containing the ``AEMET`` weather forecast data:
 
 ```json
 {
@@ -166,7 +177,7 @@ This route returns a JSON object containing the ``AEMET`` weather forecast data:
 }
 ```
 
-This can be used in for a _Volto integration_ for example the `WeatherForecast` component available into the [volto-aemet](https://github.com/collective/volto-aemet) add-on.
+This can be implements in a `Volto` _integration_ for example, the `WeatherForecast` component available into the [volto-aemet](https://github.com/collective/volto-aemet) add-on.
 
 ---
 
@@ -174,7 +185,7 @@ This can be used in for a _Volto integration_ for example the `WeatherForecast` 
 
 - [Issue tracker](https://github.com/collective/collective.volto.aemet/issues)
 - [Source code](https://github.com/collective/collective.volto.aemet/)
-- [Documentation](https://collectivevoltoaemet.readthedocs.io/)
+- [Documentation](https://collectivevoltoaemet.readthedocs.io/en/latest/)
 
 ### Prerequisites ✅
 
@@ -232,7 +243,7 @@ See also the documentation of [Mockup and Patternslib](https://6.docs.plone.org/
 
 Developed with the support of:
 
-- [Agencia Estatal de Meteorología - AEMET. Gobierno de España](https://www.aemet.es/).
+- [Agencia Estatal de Meteorología - AEMET. Gobierno de España](https://www.aemet.es/es/portada).
 
   <img width="500" alt="AEMET Logo" src="https://raw.githubusercontent.com/collective/collective.volto.aemet/refs/heads/main/docs/source/images/aemet-logo-blue.svg">
 
@@ -256,4 +267,4 @@ You can see a list of contributors in the [CONTRIBUTORS.md](https://raw.githubus
 
 ## License
 
-The project is licensed under GPLv2.
+The project is licensed under [GPLv2](https://raw.githubusercontent.com/collective/collective.volto.aemet/refs/heads/main/LICENSE.md).

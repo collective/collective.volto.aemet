@@ -63,7 +63,7 @@ Homepage = "https://github.com/collective/collective.volto.aemet"
 PyPI = "https://pypi.org/project/collective.volto.aemet"
 Source = "https://github.com/collective/collective.volto.aemet"
 Tracker = "https://github.com/collective/collective.volto.aemet/issues"
-Documentation = "https://collectivevoltoaemet.readthedocs.io/"
+Documentation = "https://collectivevoltoaemet.readthedocs.io/en/latest/"
 Changelog = "https://github.com/collective/collective.volto.aemet/blob/main/CHANGELOG.md"
 "Contributors" = "https://github.com/collective/collective.volto.aemet/blob/main/CONTRIBUTORS.md"
 

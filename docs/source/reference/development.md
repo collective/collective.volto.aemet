@@ -1,16 +1,15 @@
 ---
 myst:
   html_meta:
-    "description": "AEMET integration with Volto development guides"
-    "property=og:description": "AEMET Volto development guides"
-    "property=og:title": "AEMET integration with Volto development guides"
-    "keywords": "Volto, AEMET integration with Volto, development, guides"
+    "description": "AEMET integration with Plone development guides"
+    "property=og:description": "AEMET Plone development guides"
+    "property=og:title": "AEMET integration with Plone development guides"
+    "keywords": "AEMET, service, Plone, integration, documentation, development, guides"
 ---
 
 # Development
 
-The development of this add-on is done in isolation using a new approach using pnpm workspaces and latest `mrs-developer` and other Volto core improvements.
-For this reason, it only works with pnpm and Volto 18 (currently in alpha).
+The development of this {term}`add-on` is making in isolation using the {term}`Plone` core improvements.
 
 ## Prerequisites ✅
 
@@ -41,20 +40,21 @@ For this reason, it only works with pnpm and Volto 18 (currently in alpha).
 Run `make help` to list the available commands.
 
 ```text
-check                          Check and fix code base according to Plone standards
-clean                          Clean installation and instance (data left intact)
-console                        Start a console into a Plone instance
-create-site                    Create a new site from scratch
-format                         Check and fix code base according to Plone standards
-help                           This help message
-install                        Install Plone and dependencies
-lint                           Check and fix code base according to Plone standards
-release                        Create a release
-remove-data                    Remove all content
-start                          Start a Plone instance on localhost:8080
-sync                           Sync project dependencies
-test                           run tests
-test-coverage                  run tests with coverage
+help                             Show this help
+check                            Check and fix code base according to Plone standards
+clean                            Clean installation and instance (data left intact)
+console                          Start a console into a Plone instance
+create-site                      Create a new site from scratch
+format                           Check and fix code base according to Plone standards
+help                             This help message
+install                          Install Plone and dependencies
+lint                             Check and fix code base according to Plone standards
+release                          Create a release
+remove-data                      Remove all content
+start                            Start a Plone instance on localhost:8080
+sync                             Sync project dependencies
+test                             run tests
+test-coverage                    run tests with coverage
 ```
 
 ## Development environment set up
@@ -79,25 +79,25 @@ In a separate terminal session, start the frontend.
 make start
 ```
 
-## Lint code
+## Lint Code
 
-Run Python tools in analyze mode.
+Run `Python` tools in analyze mode.
 
 ```shell
 make lint
 ```
 
-## Format code
+## Format Code
 
-Run Python tools in fix mode.
+Run `Python` tools in fix mode.
 
 ```shell
 make format
 ```
 
-## i18n
+## Internationalization - i18n
 
-Extract the i18n messages to locales.
+Synchronise the `i18n` messages to `locales` directory.
 
 ```shell
 make i18n
@@ -114,7 +114,7 @@ make test
 Run unit tests with coverage report.
 
 ```shell
-test-coverage
+make test-coverage
 ```
 
 ## Contents
@@ -133,7 +133,7 @@ make remove-data
 
 ## Releases
 
-Create a release of this add-on
+Create a release of this {term}`add-on`
 
 ```shell
 make release

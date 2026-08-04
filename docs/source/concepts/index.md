@@ -1,26 +1,25 @@
 ---
 myst:
   html_meta:
-    "description": "AEMET integration with Plone concepts"
-    "property=og:description": "AEMET Plone concepts"
+    "description": "AEMET Plone concepts"
+    "property=og:description": "AEMET integration with Plone concepts"
     "property=og:title": "AEMET integration with Plone concepts"
-    "keywords": "Plone, AEMET integration with Plone, concepts"
+    "keywords": "AEMET, service, Plone, integration, documentation, concepts"
 ---
 
 # Functional concepts
 
-Functional concepts of integration with AEMET in Plone and Volto.
+Functional concepts of integration with {term}`AEMET` service in {term}`Plone` and {term}`Volto`.
 
-## Introduction
+## Overview
 
-The integration of **AEMET (State Meteorological Agency)** with **Plone CMS** and **Volto**
-enables official meteorological information to be incorporated into a website, providing
-users with up-to-date data on weather conditions, forecasts, weather warnings and other
-relevant climate information.
+The {term}`AEMET` integration facilitates the reuse of the web services such as:
 
-This integration facilitates the reuse of the web services (REST APIs and XML/JSON files)
-published by AEMET, enabling Plone to act as an intermediary between the platform and the
-user interface developed in Volto.
+- REST APIs
+- XML/JSON data files
+
+Which published by {term}`AEMET`, enabling {term}`Plone` to act as an intermediary
+between the platform and the user interface developed in {term}`Volto`.
 
 ---
 
@@ -29,10 +28,10 @@ user interface developed in Volto.
 The integration aims to achieve the following objectives:
 
 * Display official weather information directly on the website.
-* Centralise access to AEMET services via the Plone backend.
+* Centralise access to {term}`AEMET` services via the {term}`Plone` backend.
 * Reduce direct calls from the browser to external services.
-* Facilitate the reuse of weather data across different Volto blocks and components.
-* Enable configuration of the service via the Plone Control Panel.
+* Facilitate the reuse of weather data across different {term}`Volto` blocks and components.
+* Enable configuration of the service via the {term}`Plone` Control Panel.
 
 ---
 
@@ -66,18 +65,18 @@ The integration aims to achieve the following objectives:
 
 The backend is responsible for:
 
-* Managing authentication with the AEMET API.
+* Managing authentication with the {term}`AEMET` API.
 * Making enquiries to meteorological services.
 * Processing responses in JSON or XML format.
 * Temporarily storing the information (cache).
-* Exposing its own REST services to Volto.
+* Exposing its own REST services to {term}`Volto`.
 * Logging errors and events related to the integration.
 
 ---
 
 ## Frontend (Volto)
 
-Volto utilises the REST services provided by Plone to:
+{term}`Volto` utilises the `REST` services provided by {term}`Plone` to:
 
 * Display the weather forecast.
 * Display weather icons.
@@ -89,13 +88,13 @@ Volto utilises the REST services provided by Plone to:
 
 # Service configuration
 
-The integration must allow the following to be configured from within Plone:
+The integration must lets the following to be configures from within {term}`Plone`:
 
-* Base URL of the service.
+* Base address of the service.
 * Default county or municipality.
 * Logging level.
 
-These settings can be stored via a configuration panel (`Registry`) accessible from the Control Panel.
+These settings can be stores via a configuration panel (`Registry`) from the Control Panel.
 
 ---
 
@@ -110,13 +109,13 @@ The information may include:
 * Low temperature.
 * Chance of precipitation.
 
-This information can be displayed on a card or block within Volto.
+This information can be displaying on a card or block within {term}`Volto`.
 
 ---
 
 # Weather warnings
 
-Users can view the official warnings issued by AEMET.
+Users can view the official warnings issued by {term}`AEMET`.
 
 Examples:
 
@@ -127,7 +126,7 @@ Examples:
 * High temperatures.
 * Low temperatures.
 
-These warnings can be highlighted using visual elements with different priority levels.
+These warnings can be highlighting using visual elements with different priority levels.
 
 ---
 
@@ -135,7 +134,7 @@ These warnings can be highlighted using visual elements with different priority 
 
 The integration may offer specific reusable blocks, for example:
 
-## Weather Block
+## Weather block
 
 Display:
 
@@ -146,7 +145,7 @@ Display:
 
 ---
 
-## Forecast Block
+## Forecast block
 
 Displays the multi-day forecast.
 
@@ -163,9 +162,9 @@ This may include:
 
 The integration must account for situations such as:
 
-* AEMET service unavailable.
+* {term}`AEMET` service unavailable.
 * Timeout.
-* Municipality does not exist.
+* Municipality doesn't exist.
 * Communication error.
 
 The system must log these events and provide clear responses to the frontend.
@@ -174,11 +173,11 @@ The system must log these events and provide clear responses to the frontend.
 
 # Security
 
-The following practices are recommended:
+The following practices are recommends:
 
 * Keep the configuration on the backend only.
-* Always use HTTPS.
-* Validate the parameters received from Volto.
+* Always use `HTTPS`.
+* Validate the parameters received from {term}`Volto`.
 * Limit the number of permitted queries.
 * Log invalid access attempts.
 
@@ -188,24 +187,24 @@ The following practices are recommended:
 
 ## Institutional website
 
-Display the weather forecast for the city where the institution is located.
+Display the weather forecast for the city where the institution is locates.
 
 ---
 
 # Benefits of integration
 
-* Official information from AEMET.
+* Official information from {term}`AEMET`.
 * Decoupled architecture between backend and frontend.
-* Reusable components in Volto.
-* Centralised configuration via Plone.
+* Reusable components in {term}`Volto`.
+* Centralised configuration via {term}`Plone`.
 * Scalability for future weather-related features.
 
 ---
 
 # Best practices
 
-* Centralise all calls to AEMET in the Plone backend.
-* Expose only proprietary REST services to Volto.
+* Centralise all calls to {term}`AEMET` in the {term}`Plone` backend.
+* Expose only proprietary REST services to {term}`Volto`.
 * Implement a configurable cache.
 * Design reusable blocks for presenting information.
 * Keep the access key secure and separate from the frontend.
