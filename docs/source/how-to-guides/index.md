@@ -25,7 +25,9 @@ To use this product in Volto, your Volto project needs to include a new add-on: 
 
 ## Translations
 
-This product has been translated into
+This product support the following languages:
+
+- Basque
 
 - English
 

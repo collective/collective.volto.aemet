@@ -1,0 +1,55 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: collective.volto.acumbamail\n"
+"POT-Creation-Date: 2026-08-04 18:18+0000\n"
+"PO-Revision-Date: 2026-08-04 18:53+0200\n"
+"Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
+"Language-Team: Basque <https://hosted.weblate.org/projects/plone/plone/eu/>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language-Code: eu\n"
+"Language-Name: Basque\n"
+"Preferred-Encodings: latin1 utf-8\n"
+"Domain: collective.volto.acumbamail\n"
+"Language: eu\n"
+"X-Generator: Poedit 3.9\n"
+"X-Is-Fallback-For: eu-es\n"
+
+#: collective/volto/aemet/profiles.zcml:22
+msgid "AEMET Plone: Uninstall"
+msgstr "AEMET Plone: Desinstaliatu"
+
+#: collective/volto/aemet/controlpanels/aemet_settings.py:10
+#: collective/volto/aemet/profiles/default/controlpanel.xml
+msgid "AEMET Settings"
+msgstr "AEMET ezarpenak"
+
+#: collective/volto/aemet/profiles.zcml:14
+msgid "AEMET integration with Plone: Install"
+msgstr "AEMETen Plone-rekin integrazioa: Instalatu"
+
+#: collective/volto/aemet/controlpanels/aemet_settings.py:11
+msgid "Define the parameters for get data from AEMET service."
+msgstr "AEMET zerbitzutik datuak lortzeko parametroak definitu."
+
+#: collective/volto/aemet/interfaces.py:22
+msgid "Location ID"
+msgstr "Kokapenaren ID-a"
+
+#: collective/volto/aemet/restapi/services/aemet/weather_forecast.py:121
+msgid "Not available"
+msgstr "Ez dago eskuragarri"
+
+#: collective/volto/aemet/profiles.zcml:14
+msgid "Package to configure a new AEMET integration with Plone site"
+msgstr "Plone guneko AEMET integrazio berri bat konfiguratzeko paketea"
+
+#: collective/volto/aemet/interfaces.py:23
+msgid "The Location ID of the AEMET service, for example '41091' to Sevilla location ID."
+msgstr "AEMET zerbitzuaren kokapen ID-a, adibidez Sevillako kokapen ID-a den '41091'."
+
+#: collective/volto/aemet/profiles.zcml:22
+msgid "Uninstall AEMET integration with Plone setup."
+msgstr "Desinstalatzea AEMETen integrazioa Plone konfigurazioarekin."
