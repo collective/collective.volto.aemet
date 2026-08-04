@@ -1,0 +1,1 @@
+Added Galician translation for this add-on [macagua]

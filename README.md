@@ -39,6 +39,9 @@ This product has been translated into
 - Catalan
 
 - English
+
+- Galician
+
 - Spanish
 
 ## Compatibility
