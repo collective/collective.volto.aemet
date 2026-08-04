@@ -36,6 +36,8 @@ This product has been translated into
 
 - Basque
 
+- Catalan
+
 - English
 - Spanish
 

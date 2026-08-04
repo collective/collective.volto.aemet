@@ -1,0 +1,55 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: collective.volto.acumbamail\n"
+"POT-Creation-Date: 2026-08-04 18:18+0000\n"
+"PO-Revision-Date: 2026-08-04 20:24+0200\n"
+"Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
+"Language-Team: Català <https://hosted.weblate.org/projects/plone/plone/ca/>\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language-Code: ca\n"
+"Language-Name: Catalan\n"
+"Preferred-Encodings: utf-8\n"
+"Domain: collective.volto.acumbamail\n"
+"X-Is-Fallback-For: ca-ad ca-es ca-fr ca-it\n"
+"X-Generator: Poedit 3.9\n"
+
+#: collective/volto/aemet/profiles.zcml:22
+msgid "AEMET Plone: Uninstall"
+msgstr "AEMET Plone: Desinstal·lar"
+
+#: collective/volto/aemet/controlpanels/aemet_settings.py:10
+#: collective/volto/aemet/profiles/default/controlpanel.xml
+msgid "AEMET Settings"
+msgstr "Configuració de l'AEMET"
+
+#: collective/volto/aemet/profiles.zcml:14
+msgid "AEMET integration with Plone: Install"
+msgstr "Integració d'AEMET amb Plone: Instal·lació"
+
+#: collective/volto/aemet/controlpanels/aemet_settings.py:11
+msgid "Define the parameters for get data from AEMET service."
+msgstr "Definiu els paràmetres per obtenir dades del servei AEMET."
+
+#: collective/volto/aemet/interfaces.py:22
+msgid "Location ID"
+msgstr "ID de localització"
+
+#: collective/volto/aemet/restapi/services/aemet/weather_forecast.py:121
+msgid "Not available"
+msgstr "No disponible"
+
+#: collective/volto/aemet/profiles.zcml:14
+msgid "Package to configure a new AEMET integration with Plone site"
+msgstr "Paquet per configurar una nova integració d'AEMET amb un lloc Plone"
+
+#: collective/volto/aemet/interfaces.py:23
+msgid "The Location ID of the AEMET service, for example '41091' to Sevilla location ID."
+msgstr "L'ID de localització del servei de l'AEMET, per exemple '41091' per a l'ID de localització de Sevilla."
+
+#: collective/volto/aemet/profiles.zcml:22
+msgid "Uninstall AEMET integration with Plone setup."
+msgstr "Desinstal·lar la integració d'AEMET amb la configuració de Plone."
