@@ -14,7 +14,10 @@
       file="permissions.zcml"
       />
   <!-- include plone.resource package -->
-  <include package="plone.resource" file="meta.zcml"/>
+  <include
+      package="plone.resource"
+      file="meta.zcml"
+      />
 
   <!-- Resource directory for Publish static media files -->
   <plone:static
