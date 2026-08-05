@@ -37,7 +37,7 @@ The original creator of this {term}`add-on` was [Leonardo J. Caballero G.](https
 
 # License
 
-The license for this {term}`add-on` is [MIT](https://raw.githubusercontent.com/collective/collective.volto.aemet/refs/heads/main/LICENSE.md).
+The license for this {term}`add-on` is [GPLv2](https://raw.githubusercontent.com/collective/collective.volto.aemet/refs/heads/main/LICENSE.md).
 
 ```{toctree}
 :caption: How to guides

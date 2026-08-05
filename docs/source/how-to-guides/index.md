@@ -52,7 +52,7 @@ pip install collective.volto.aemet
 
 ## Enable it
 
-Visit http://localhost:8080/Plone in a browser, login, so go to `Site setup`, next to `Add-ons` control panel, 
+Visit http://localhost:8080/Plone in a browser, login, so go to `Site setup`, next to `Add-ons` {term}`Control panel`, 
 find the {term}`collective.volto.aemet` {term}`add-on` and select the `Install` button for enabled it.
 
 ## Settings it
@@ -68,18 +68,18 @@ on its website. For example, for the every municipality:
      ```{note}
      The `XML` file name has a prefix called `localidad_` and a suffix with an **ID**. For example,
      the ID for the municipality of _Seville_ is `41091`. This **ID** will be used later in the
-     `AEMET Settings` control panel.
+     {term}`AEMET Settings` {term}`Control panel`.
      ```
 
-To use this {term}`add-on`, go to the `Site setup`, next to the ``Add-on Configuration`` icon, as shown below:
+To use this {term}`add-on`, go to the ``Site setup``, next to the ``Add-on Configuration`` icon, as shown below:
 
 <img width="290" alt="Add-on Configuration" src="../images/addon-configuration-aemet-icon.png">
 
-This {term}`AEMET Settings`, you can access the control panel, as shown below:
+This {term}`AEMET Settings`, you can access the {term}`Control panel`, as shown below:
 
 <img width="720" alt="AEMET Settings" src="../images/aemet-settings.png">
 
-In this control panel, you can configure the following fields:
+In this {term}`Control panel`, you can configure the following fields:
 
 - {term}`Location ID`, The Location ID of the {term}`AEMET` service, for example '41091' to Sevilla location ID.
 

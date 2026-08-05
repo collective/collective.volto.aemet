@@ -35,7 +35,7 @@ Plone
 Volto
     [Volto](https://github.com/plone/volto) is the default React-based frontend for {term}`Plone` 6.
     It communicates with the {term}`Plone` backend via exclusively through the {term}`plone.restapi` REST API.
-    The {term}`volto-aemet` consumes the {term}`@aemet-weather-forecast` endpoint to display weather data in {term}`Volto` blocks.
+    The {term}`volto-aemet` {term}`add-on` consumes the {term}`@aemet-weather-forecast` endpoint to display weather data in {term}`Volto` blocks.
 
 add-on
     An add-on in {term}`Plone` extends its core functionality.
@@ -53,21 +53,25 @@ add-on
     -   [Add-ons tagged with the trove classifier `Framework :: Plone` on PyPI](https://pypi.org/search/?c=Framework+%3A%3A+Plone)
 
 plone.restapi
-    [plone.restapi](https://6.docs.plone.org/plone.restapi/docs/source/) is the RESTful hypermedia API for {term}`Plone`.
-    It enables {term}`Volto` and other clients to interact with {term}`Plone` content and configuration over HTTP using JSON.
-    This {term}`add-on` registers its services and control panel adapters through ``plone.restapi``.
-    It is used by {term}`collective.volto.aemet` to expose the `@aemet-settings` and `@aemet-weather-forecast` endpoints to the Volto frontend.
+    `plone.restapi` is the RESTful hypermedia API for {term}`Plone`. It enables {term}`Volto` and other clients
+    to interact with {term}`Plone` content and configuration over HTTP using JSON. This {term}`add-on` registers
+    its services and {term}`Control panel` adapters through ``plone.restapi``. It is used by {term}`collective.volto.aemet`
+    to expose the {term}`@aemet-settings` and {term}`@aemet-weather-forecast` endpoints to the {term}`Volto` frontend.
 
-Control Panel
+    ```{tip}
+    More infomation checkout the official [documentation](https://6.docs.plone.org/plone.restapi/docs/source/).
+    ```
+
+Control panel
     Checkout the {term}`AEMET Settings` term.
 
 AEMET Settings
-    The {term}`AEMET Settings` configuration panel available in {term}`Plone`'s Site Setup under `Add-on Configuration`.
+    The `AEMET Settings` {term}`Control panel` available in {term}`Plone`'s Site Setup under `Add-on Configuration`.
     It allows administrators to configure the {term}`Location ID` field stored in {term}`plone.registry`.
 
 plone.registry
     A {term}`Plone` component that stores configuration values as named records.
-    {term}`collective.volto.aemet` uses it to persist the {term}`IAemetSettings` interface fields ({term}`location_id`).
+    {term}`collective.volto.aemet` uses it to persist the {term}`IAemetSettings` interface field ({term}`location_id`).
 
 Registry
     The {term}`Plone` Registry is a key-value store for site configuration, managed by the {term}`plone.registry` package.
@@ -77,11 +81,11 @@ Registry
 
 GenericSetup
     A {term}`Plone` framework for managing configuration through filesystem-based import and export profiles.
-    {term}`collective.volto.aemet` uses a `GenericSetup` profile to register its registry records and control panel on installation.
+    {term}`collective.volto.aemet` uses a `GenericSetup` profile to register its registry records and {term}`Control panel` on installation.
 
 collective.volto.aemet
-    `collective.volto.aemet` is the {term}`Plone` {term}`add-on` that integrates {term}`AEMET` weather data into a {term}`Plone` site.
-    It provides a control panel to configure the target municipality, a REST API endpoint to expose weather forecast data, and a
+    `collective.volto.aemet` is the {term}`Plone` {term}`add-on` that integrates {term}`AEMET` sevice weather data into a {term}`Plone` site.
+    It provides a {term}`Control panel` to configure the target municipality, a REST API endpoint to expose weather forecast data, and a
     browser layer ({term}`IAemetLayer`) to scope its components.
     It is designed to work together with the {term}`volto-aemet` {term}`Volto` {term}`add-on`.
 
@@ -90,9 +94,9 @@ collective.volto.aemet
     ```
 
 volto-aemet
-    `volto-aemet` is the {term}`Volto` {term}`add-on` that integrates {term}`AEMET` weather data into a {term}`Plone` site via
+    `volto-aemet` is the {term}`Volto` {term}`add-on` that integrates {term}`AEMET` sevice weather data into a {term}`Plone` site via
     the {term}`collective.volto.aemet` {term}`add-on`.
-    It provides a control panel to configure the target municipality, Two {term}`Volto` content blocks.
+    It provides a {term}`Control panel` to configure the target municipality, Two Volto content blocks.
 
     ```{tip}
     More infomation checkout the official [documentation](https://volto-aemet.readthedocs.io/en/latest/).
@@ -105,7 +109,7 @@ IAemetLayer
 IAemetSettings
     ``IAemetSettings`` is the Zope schema interface that declares the configuration fields for the {term}`AEMET` {term}`add-on`.
     Currently it defines a single field: {term}`location_id`.
-    It is used as the schema for both the {term}`AEMET Settings` control panel and the {term}`Plone` {term}`Registry` records.
+    It is used as the schema for both the {term}`AEMET Settings` {term}`Control panel` and the {term}`Plone` {term}`Registry` records.
 
 Location ID
 location_id
@@ -113,9 +117,9 @@ location_id
     It is used to construct the URL of the XML feed, for example:
     ``https://www.aemet.es/xml/municipios/localidad_28058.xml`` for Madrid (``28058``),
     or ``localidad_41091.xml`` for Sevilla (``41091``).
-    It is configured via the {term}`AEMET Settings` control panel and stored in the {term}`Plone` registry under the key ``aemet.location_id``.
+    It is configured via the {term}`AEMET Settings` {term}`Control panel` and stored in the {term}`Plone` registry under the key ``aemet.location_id``.
 
-@@aemet-settings
+@aemet-settings
     A REST API endpoint exposed by {term}`collective.volto.aemet` that provides the {term}`AEMET Settings` to the {term}`Volto` frontend.
     Anonymous users cannot access the {term}`Plone` registry directly, so this dedicated endpoint is used instead.
 
@@ -125,9 +129,11 @@ location_id
 
 @aemet-weather-forecast
     A REST API endpoint exposed by this {term}`add-on` that provides the publicly accessible (``zope2.View`` permission) and returns a
-    JSON object with the current day's weather forecast for the configured municipality, fetched from the {term}`AEMET` XML service.
+    JSON object with the current day's weather forecast for the configured municipality, fetched from the {term}`AEMET` `XML` service.
 
-    **Example:** Take a look to the {ref}`aemet-weather-forecast-route` section.
+    ```{note}
+    Take a look to the {ref}`aemet-weather-forecast-route` section.
+    ```
 
 WeatherForecastGet
     ``WeatherForecastGet`` is the {term}`Plone` REST API service class (``plone.restapi.services.Service``) that handles ``GET`` requests to the {term}`@aemet-weather-forecast` endpoint.

@@ -23,7 +23,7 @@ Anonymous users can't access registry resources by default with {term}`plone.res
 To avoid enabling registry access to everyone, this package exposes a dedicated RestApi `route` with
 {term}`AEMET Settings` (`@aemet-settings`):
 
-Get the information from the {term}`AEMETAEMET Settings` via `curl` command:
+Get the information from the {term}`AEMET Settings` via `curl` command:
 
 ```shell
 curl -X GET http://localhost:8080/Plone/@controlpanels/aemet-settings \
@@ -90,7 +90,7 @@ Via: waitress
 X-Powered-By: Zope (www.zope.dev), Python (www.python.org)
 ```
 
-That means you updates the values in the {term}`AEMET Settings` control panel fields correctly.
+That means you updates the value in the {term}`AEMET Settings` control panel field correctly.
 
 ```{note}
 You can validate the update operation, going to ``Site setup > Add-on Settings > AEMET Settings``.
@@ -101,7 +101,7 @@ You can validate the update operation, going to ``Site setup > Add-on Settings >
 (aemet-weather-forecast-route)=
 ## AEMET weather forecast route
 
-This `route` is uses to fetch the current weather forecast for location defined on the **AEMET Settings control panel**:
+This `route` is uses to fetch the current weather forecast for location defined on the {term}`AEMET Settings` {term}`Control panel`:
 
 ```shell
 curl -X GET http://localhost:8080/Plone/++api++/@aemet-weather-forecast
@@ -127,4 +127,4 @@ This `route` returns a `JSON` object containing the {term}`AEMET` weather foreca
 }
 ```
 
-This `route` can be implements in a {term}`Volto` _integration_ for example, the `WeatherForecast` component available into the {term}`volto-aemet` {term}`add-on`.
+This `route` can be implements in a {term}`Volto` _integration_, for example, the `WeatherForecast` component available into the {term}`volto-aemet` {term}`add-on`.

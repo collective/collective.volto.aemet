@@ -14,7 +14,7 @@ This part of the documentation contains reference material, including APIs, conf
 
 ## AEMET
 
--   [Agencia Estatal de Meteorología - AEMET. Gobierno de España](https://www.aemet.es/es/portada).
+-   Agencia Estatal de Meteorología - {term}`AEMET` - Gobierno de España.
 
 -   [Datos abiertos de AEMET. Catálogo. Plan RISP.](https://www.aemet.es/es/datos_abiertos/catalogo).
 

@@ -10,7 +10,7 @@ An integration for the [AEMET](https://www.aemet.es/es/portada) service with Plo
 
 - Control panel in Plone registry to manage ``AEMET Settings``.
 
-- RestApi endpoint that exposes the `AEMET Settings` for `Volto` _integration_.
+- RestApi endpoint that exposes the ``AEMET Settings`` for `Volto` _integration_.
 
 - RestApi endpoint that exposes the current _weather forecast_ for the _Location ID_ defined on the ``AEMET Settings`` control panel.
 
@@ -76,7 +76,7 @@ Anonymous users can't access registry resources by default with ``plone.restapi`
 To avoid enabling registry access to everyone, this package exposes a dedicated RestApi `route` with
 ``AEMET Settings`` (`@aemet-settings`):
 
-Get the information from the ``AEMETAEMET Settings`` via `curl` command:
+Get the information from the ``AEMET Settings`` via `curl` command:
 
 ```shell
 curl -X GET http://localhost:8080/Plone/@controlpanels/aemet-settings \
