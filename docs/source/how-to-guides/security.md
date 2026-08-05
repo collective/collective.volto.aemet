@@ -9,7 +9,7 @@ myst:
 
 # Security access
 
-The {term}`collective.volto.aemet`` {term}`add-on` includes the following roles and permissions:
+The {term}`collective.volto.aemet` {term}`add-on` includes the following roles and permissions:
 
 ## Roles
 
