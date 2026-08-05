@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.volto.acumbamail\n"
-"POT-Creation-Date: 2026-08-04 18:18+0000\n"
+"POT-Creation-Date: 2026-08-05 20:43+0000\n"
 "PO-Revision-Date: 2026-08-04 18:53+0200\n"
 "Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
 "Language-Team: Basque <https://hosted.weblate.org/projects/plone/plone/eu/>\n"

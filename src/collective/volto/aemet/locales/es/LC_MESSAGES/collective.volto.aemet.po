@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.volto.aemet\n"
-"POT-Creation-Date: 2026-07-17 10:56+0000\n"
+"POT-Creation-Date: 2026-08-05 20:43+0000\n"
 "PO-Revision-Date: 2026-07-17 24:23+0200\n"
 "Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
 "Language-Team: ES <LL@li.org>\n"
@@ -40,7 +40,7 @@ msgstr "Define los parámetros para obtener datos del servicio AEMET."
 msgid "Location ID"
 msgstr "ID de ubicación"
 
-#: collective/volto/aemet/restapi/services/weather_forecast/weather_forecast.py:121
+#: collective/volto/aemet/restapi/services/aemet/weather_forecast.py:121
 msgid "Not available"
 msgstr "No disponible"
 
