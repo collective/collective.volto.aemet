@@ -1,1 +1,0 @@
-Added Catalan translation for this add-on [macagua]
